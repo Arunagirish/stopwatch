@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="count">Counting</h2>
+        <p class="number">0</p>
+        <button class="plus">+</button>
+        <button class="minus">-</button>
+        <button class="clr">Reset</button>
+    </div>
+
+
+    <script>
+        let number = document.querySelector(".number");
+        let plus = document.querySelector(".plus");
+        let minus = document.querySelector(".minus");
+        let reset = document.querySelector(".clr");
+        let cnt = 0;
+        plus.addEventListener("click",()=>{
+            cnt++;
+            number.innerHTML = cnt;
+        });
+        minus.addEventListener("click",()=>{
+            cnt--;
+            number.innerHTML = cnt;
+        });
+        reset.addEventListener("click",()=>{
+            cnt = 0;
+            number.innerHTML = cnt;
+        });
+    </script>
+</body>
+</html>
